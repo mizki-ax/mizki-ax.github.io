@@ -1,16 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>litte page</title>
+  <title>little page</title>
+
   <style>
     body {
       background-color: #f5f5f5;
       color: #333333;
-      font-family: Helvetica;
+      font-family: Helvetica, sans-serif;
       text-align: center;
       padding: 30px 20px;
+      margin: 0;
     }
 
     h1 {
@@ -36,47 +39,113 @@
       font-size: 13px;
     }
 
-    p2 {
+    .small-text {
       line-height: 1.8;
       font-size: 12px;
     }
 
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 25px;
-    }
-
+    /* 上部のメイン画像 */
     .icon {
       width: 120px;
       height: 120px;
       object-fit: contain;
     }
 
-    .insta-icon {
+    /* 各コンテンツのカード */
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 25px auto 0;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    /* SNSアイコン全体 */
+    .sns-icons {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    /* アイコンとSNS名 */
+    .sns-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 70px;
+      color: #333333;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    /* SNS画像 */
+    .sns-item img {
+      display: block;
       width: 32px;
       height: 32px;
       object-fit: contain;
       transition: opacity 0.2s;
     }
 
-  <div class="card">
-    <h2>links</h2>
-    
-    <div class="sns-icons">
-     <a href="https://www.instagram.com/mizki_1/"
-       class="sns-item" target="_blank" rel="noopener noreferrer">
-      <img src="Instagram_Glyph_Black.png" alt="Instagram">
-      <span>Instagram</span>
-    </a>
+    /* マウスを乗せたとき */
+    .sns-item:hover img {
+      opacity: 0.65;
+    }
 
-    <a href="https:https://takeimizuki.studio.site/"
-       class="sns-item" target="_blank" rel="noopener noreferrer">
-      <img src="B_display.png" alt="WEB">
-      <span>WEB</span>
-    </a>
+    .sns-item:hover {
+      color: #E87818;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- プロフィール -->
+  <h3>mizki</h3>
+  <h1>little page</h1>
+
+  <img src="muzumuzu4.png">
+  <p>graphic design <br/>
+       illustration <br/>
+       etc...</p>
+
+  <!-- SNSリンクカード -->
+  <div class="card">
+
+    <h2>links</h2>
+
+    <div class="sns-icons">
+
+      <!-- Instagram -->
+      <a
+        href="https://www.instagram.com/mizki_1/"
+        class="sns-item"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagramのプロフィール"
+      >
+        <img src="Instagram_Glyph_Black.png" alt="">
+        <span>Instagram</span>
+      </a>
+
+      <!-- WEBサイト -->
+      <a
+        href="https://takeimizuki.studio.site/"
+        class="sns-item"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WEBサイト"
+      >
+        <img src="B_display.png" alt="">
+        <span>WEB</span>
+      </a>
+
     </div>
   </div>
+
 </body>
 </html>
